@@ -1,5 +1,5 @@
 {
-  "name": "typescript",
+  "name": "LearningTypescript",
   "version": "1.0.0",
   "description": "Learning TypeScript via Udemy course",
   "main": "index.js",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/abhiram-satha/typeScript/issues"
   },
-  "homepage": "https://github.com/abhiram-satha/typeScript#readme"
+  "homepage": "https://github.com/abhiram-satha/typeScript#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
