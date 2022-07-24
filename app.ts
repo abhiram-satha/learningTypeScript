@@ -8,6 +8,11 @@ const person = {
   },
 };
 
-let favouriteActivites: any[];
-favouriteActivites = ["Sports", 1];
+let favouriteActivites: string[];
+favouriteActivites = ["Sports"];
 console.log(person);
+
+for(const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase())
+  // console.log(hobby.map()) ===> this would result in an error because TS knows hobby is a string not an array
+}
