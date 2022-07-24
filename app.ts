@@ -1,17 +1,13 @@
-const person: {
-  name: string;
-  age: number;
-  details: {
-    height: string;
-    weight: string;
-  }
-} = {
+const person = {
   name: "Abhiram",
   age: 28,
+  hobbies: ["Sports", "Cooking"],
   details: {
     height: "6 feet",
-    weight: "16 lbs"
-  }
+    weight: "16 lbs",
+  },
 };
 
-console.log(person)
+let favouriteActivites: any[];
+favouriteActivites = ["Sports", 1];
+console.log(person);
