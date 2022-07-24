@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/abhiram-satha/typeScript#readme",
   "devDependencies": {
+    "lite-server": "^2.6.1",
     "typescript": "^4.7.4"
   }
 }
