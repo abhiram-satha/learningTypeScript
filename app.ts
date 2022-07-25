@@ -1,8 +1,10 @@
 enum Role2 {'asnumber', 'astext'};
 
+type Combinable = number | string;
+
 function combine(
-  input1: number | string,
-  input2: number | string,
+  input1: Combinable,
+  input2: Combinable,
   resultType: Role2.asnumber |  Role2.astext
 ) {
   let result;
