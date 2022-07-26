@@ -8,3 +8,5 @@ Section 2: TypeScript Basics & Basic Types
     - Arrays
     - Enum
     - Union Types
+    - Alias
+    - Void
