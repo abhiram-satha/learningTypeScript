@@ -1,27 +1,17 @@
-var Role2;
-(function (Role2) {
-    Role2[Role2["asnumber"] = 0] = "asnumber";
-    Role2[Role2["astext"] = 1] = "astext";
-})(Role2 || (Role2 = {}));
-;
-function combine(input1, input2, resultType) {
-    var result;
-    if (typeof input1 === "number" && typeof input2 === "number" || resultType === 0) {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    // if (resultType === "as-number") {
-    //   return +result;
-    // } else {
-    //   return result.toString();
-    // }
-    return result;
+function add(n1, n2) {
+    return n1 + n2;
 }
-var combinedAges = combine(30, 26, 0);
-console.log(combinedAges);
-var combinedStringAges = combine("30", "26", 0);
-console.log(combinedStringAges);
-var combinedNames = combine("Max", "Anna", 1);
-console.log(combinedNames);
+function printResult(num) {
+    //void because there is no return statement in this function
+    console.log("Result: " + num);
+}
+function printNum(num) {
+    //undefined because there is no value actually being returned could also use void
+    console.log("Result: " + num);
+    return;
+}
+printResult(add(5, 2));
+var combineValues;
+combineValues = add;
+console.log(combineValues(8, 8));
+// let someValue: undefined;
