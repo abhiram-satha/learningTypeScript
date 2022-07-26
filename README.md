@@ -10,3 +10,5 @@ Section 2: TypeScript Basics & Basic Types
     - Union Types
     - Alias
     - Void
+    - Function Types
+    - Unknown Type
