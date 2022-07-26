@@ -1,17 +1,10 @@
-function add(n1, n2) {
-    return n1 + n2;
+var userInput;
+var userName;
+userInput = 5;
+if (typeof userInput === "string") {
+    userName = userInput;
 }
-function printResult(num) {
-    //void because there is no return statement in this function
-    console.log("Result: " + num);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-function printNum(num) {
-    //undefined because there is no value actually being returned could also use void
-    console.log("Result: " + num);
-    return;
-}
-printResult(add(5, 2));
-var combineValues;
-combineValues = add;
-console.log(combineValues(8, 8));
-// let someValue: undefined;
+generateError('An error occurred', 500);
