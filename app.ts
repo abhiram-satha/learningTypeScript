@@ -8,4 +8,12 @@ function printResult(num: number): void {
   console.log("Result: " + num);
 }
 
+function printNum(num: number): undefined {
+  //undefined because there is no value actually being returned could also use void
+  console.log("Result: " + num);
+  return;
+}
+
 printResult(add(5, 2));
+
+// let someValue: undefined;
