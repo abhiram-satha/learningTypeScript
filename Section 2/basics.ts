@@ -1,4 +1,4 @@
-function add (n1: number, n2: number, showResult: boolean, phrase: string) {
+function addNum (n1: number, n2: number, showResult: boolean, phrase: string) {
 
   // if(typeof n1 !== 'number' || typeof n2 !== 'number') {
   //   throw new Error("Incorrect input!")
@@ -13,8 +13,8 @@ function add (n1: number, n2: number, showResult: boolean, phrase: string) {
 let number1: number;
 number1 = 5;
 const number2 = 2.8;
-const printResult = false;
+const printResult2 = false;
 const resultPhrase = "Result is: ";
 
-const result = add(number1, number2, printResult, resultPhrase);
+const result = addNum(number1, number2, printResult2, resultPhrase);
 console.log(result);
