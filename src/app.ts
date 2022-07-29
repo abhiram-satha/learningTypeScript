@@ -13,4 +13,12 @@ if (button) {
 
  console.log(add(8,7))
 
+ const hobbies = ['Sports', 'Cooking'];
+
+ const activeHobbies = ['hiking', ...hobbies];
+
+
+
+
+
 
