@@ -15,7 +15,13 @@
 
  const hobbies = ['Sports', 'Cooking'];
 
+
+ //destructuring arrays
+ const [hobby1, hobby2, ...remaininghobbies] = hobbies;
+
  const activeHobbies = ['hiking', ...hobbies];
+
+
 
  const person = {
    name: "Abhiram",
