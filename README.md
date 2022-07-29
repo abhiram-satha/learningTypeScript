@@ -24,3 +24,5 @@ Section 3: Complier
     "exclude": ["path to file name"],
     "include": ["path to file name"]
     ```
+
+Section 4: TypeScript & Modern JavaScript
