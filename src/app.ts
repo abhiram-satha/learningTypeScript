@@ -24,14 +24,17 @@
 
 
  const person = {
-   name: "Abhiram",
+   firstName: "Abhiram",
    age: 30
  }
+
+ //
+ const {firstName, age} = person;
 
 
  const copiedPerson = {...person};
 
- console.log(copiedPerson.name)
+ console.log(copiedPerson.firstName)
 
 
 const add = (...numbers: number[]) => {
