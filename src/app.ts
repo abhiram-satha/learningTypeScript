@@ -2,7 +2,7 @@ class Department {
   // private name: string; //public is done by default
   private employees: string[] = [];
 
-  constructor(private id: string, public name: string) {
+  constructor(private readonly id: string, public name: string) {
 
     // this.name = n;
   }
@@ -24,6 +24,8 @@ class Department {
 
 
 const accounting = new Department("d1", "Accounting");
+
+// accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
 
 accounting.addEmployee("Mac");
 accounting.addEmployee("Abhiram")

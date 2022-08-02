@@ -36,3 +36,4 @@ Section 5: Classes & Interfaces
     - Object-oriented programming
     - Classes & Constructors
     - Private Access
+    - readonly (can only be changed at intialization & typescript only)
