@@ -22,8 +22,33 @@ class Department {
 
 }
 
+class ITDepartment extends Department {
+  constructor(id: string, public admins: string[]) {
+    super(id, "IT");
+    this.admins = admins;
+  }
+}
 
-const accounting = new Department("d1", "Accounting");
+class AccountingDepartment extends Department {
+  constructor(id: string, private reports: string[]) {
+    super(id, "Accounting")
+  }
+
+  addReport(report: string) {
+    this.reports.push(report)
+  }
+
+  printReports() {
+    console.log(this.reports)
+  }
+}
+
+
+const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
+
+const itteam = new ITDepartment('d2', ["Abhi"]);
+
+console.log(itteam)
 
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
 
@@ -32,7 +57,7 @@ accounting.addEmployee("Abhiram")
 
 // accounting.employees[2] = "Anna";  => this would result in an error 
 
-accounting.describe();
+console.log(accounting);
 
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
 

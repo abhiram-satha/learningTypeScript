@@ -37,3 +37,4 @@ Section 5: Classes & Interfaces
     - Classes & Constructors
     - Private Access
     - readonly (can only be changed at intialization & typescript only)
+    - Inheritance
