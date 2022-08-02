@@ -35,3 +35,4 @@ Section 4: TypeScript & Modern JavaScript
 Section 5: Classes & Interfaces 
     - Object-oriented programming
     - Classes & Constructors
+    - Private Access

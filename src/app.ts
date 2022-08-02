@@ -1,5 +1,6 @@
 class Department {
-  name: string;
+  public name: string; //public is done by default
+  private employees: string[] = [];
 
   constructor(n: string) {
     this.name = n;
@@ -9,12 +10,27 @@ class Department {
     console.log('Department:' + this.name)
   }
 
+  addEmployee(employee: string) {
+    this.employees.push(employee)
+  }
+
+  printEmployeeInformation() {
+    console.log(this.employees.length);
+    console.log(this.employees)
+  }
+
 }
+
 
 const accounting = new Department("Accounting");
 
-accounting.describe();
+accounting.addEmployee("Mac");
+accounting.addEmployee("Abhiram")
 
-const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
+// accounting.employees[2] = "Anna";  => this is an error 
 
-accountingCopy.describe();
+// accounting.describe();
+
+// const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
+
+// accountingCopy.describe();
