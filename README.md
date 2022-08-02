@@ -26,3 +26,11 @@ Section 3: Complier
     ```
 
 Section 4: TypeScript & Modern JavaScript
+    - ES6
+    - Arrow Functions
+    - Array & Object Destructuring
+    - Default Parameters
+    - Spread Operator
+
+Section 5: Classes & Interfaces 
+    - Object-oriented programming
