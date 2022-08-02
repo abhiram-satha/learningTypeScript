@@ -1,13 +1,14 @@
 class Department {
-  public name: string; //public is done by default
+  // private name: string; //public is done by default
   private employees: string[] = [];
 
-  constructor(n: string) {
-    this.name = n;
+  constructor(private id: string, public name: string) {
+
+    // this.name = n;
   }
 
   describe(this: Department) {
-    console.log('Department:' + this.name)
+    console.log(`Department: ${this.id}: ${this.name}`)
   }
 
   addEmployee(employee: string) {
@@ -22,14 +23,14 @@ class Department {
 }
 
 
-const accounting = new Department("Accounting");
+const accounting = new Department("d1", "Accounting");
 
 accounting.addEmployee("Mac");
 accounting.addEmployee("Abhiram")
 
-// accounting.employees[2] = "Anna";  => this is an error 
+// accounting.employees[2] = "Anna";  => this would result in an error 
 
-// accounting.describe();
+accounting.describe();
 
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
 
