@@ -1,6 +1,6 @@
 class Department {
   // private name: string; //public is done by default
-  private employees: string[] = [];
+  protected employees: string[] = [];
 
   constructor(private readonly id: string, public name: string) {
 
@@ -41,6 +41,13 @@ class AccountingDepartment extends Department {
   printReports() {
     console.log(this.reports)
   }
+
+  addEmployee(employee: string){
+      if(employee === "Max") {
+        return;
+      }
+      this.employees.push(employee)
+  }
 }
 
 
@@ -52,8 +59,9 @@ console.log(itteam)
 
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
 
-accounting.addEmployee("Mac");
+accounting.addEmployee("Max");
 accounting.addEmployee("Abhiram")
+accounting.printEmployeeInformation();
 
 // accounting.employees[2] = "Anna";  => this would result in an error 
 

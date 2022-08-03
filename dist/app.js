@@ -36,13 +36,20 @@ class AccountingDepartment extends Department {
     printReports() {
         console.log(this.reports);
     }
+    addEmployee(employee) {
+        if (employee === "Max") {
+            return;
+        }
+        this.employees.push(employee);
+    }
 }
 const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
 const itteam = new ITDepartment('d2', ["Abhi"]);
 console.log(itteam);
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
-accounting.addEmployee("Mac");
+accounting.addEmployee("Max");
 accounting.addEmployee("Abhiram");
+accounting.printEmployeeInformation();
 // accounting.employees[2] = "Anna";  => this would result in an error 
 console.log(accounting);
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
