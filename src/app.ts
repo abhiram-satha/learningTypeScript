@@ -5,6 +5,10 @@ class Department {
   constructor(private readonly id: string, public name: string) {
     // this.name = n;
   }
+  static fiscalYear = 2022;
+  static createEmployee(name: string) {
+    return {name: name}
+  }
 
   describe(this: Department) {
     console.log(`Department: ${this.id}: ${this.name}`);
@@ -38,10 +42,10 @@ class AccountingDepartment extends Department {
   }
 
   set mostRecentReport(value: string) {
-    if(!value) {
-      throw new Error("No Report found")
+    if (!value) {
+      throw new Error("No Report found");
     }
-    this.addReport(value)
+    this.addReport(value);
   }
 
   constructor(id: string, private reports: string[]) {
@@ -66,11 +70,15 @@ class AccountingDepartment extends Department {
   }
 }
 
+const employee1 = Department.createEmployee("Max")
+
+console.log(employee1, Department.fiscalYear)
+
 const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
 
 const itteam = new ITDepartment("d2", ["Abhi"]);
 
-accounting.mostRecentReport = ""
+accounting.mostRecentReport = "";
 
 console.log(itteam);
 
