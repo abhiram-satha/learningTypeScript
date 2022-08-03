@@ -29,9 +29,23 @@ class AccountingDepartment extends Department {
     constructor(id, reports) {
         super(id, "Accounting");
         this.reports = reports;
+        this.lastReport = reports[0];
+    }
+    get mostRecentReport() {
+        if (this.lastReport) {
+            return this.lastReport;
+        }
+        throw new Error("No report found");
+    }
+    set mostRecentReport(value) {
+        if (!value) {
+            throw new Error("No Report found");
+        }
+        this.addReport(value);
     }
     addReport(report) {
         this.reports.push(report);
+        this.lastReport = this.reports[0];
     }
     printReports() {
         console.log(this.reports);
@@ -44,13 +58,14 @@ class AccountingDepartment extends Department {
     }
 }
 const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
-const itteam = new ITDepartment('d2', ["Abhi"]);
+const itteam = new ITDepartment("d2", ["Abhi"]);
+accounting.mostRecentReport = "";
 console.log(itteam);
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
 accounting.addEmployee("Max");
 accounting.addEmployee("Abhiram");
 accounting.printEmployeeInformation();
-// accounting.employees[2] = "Anna";  => this would result in an error 
+// accounting.employees[2] = "Anna";  => this would result in an error
 console.log(accounting);
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
 // accountingCopy.describe();
