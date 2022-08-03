@@ -1,3 +1,3 @@
 "use strict";
-console.log('Sending...');
+// console.log('Sending...')
 //# sourceMappingURL=analytics.js.map

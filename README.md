@@ -39,4 +39,4 @@ Section 5: Classes & Interfaces
     - readonly (can only be changed at intialization & typescript only)
     - Inheritance
     - Getters & Setters
-    - Static
+    - Static properties

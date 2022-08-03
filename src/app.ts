@@ -1,8 +1,8 @@
-class Department {
+abstract class Department {
   // private name: string; //public is done by default
   protected employees: string[] = [];
 
-  constructor(private readonly id: string, public name: string) {
+  constructor(protected readonly id: string, public name: string) {
     // this.name = n;
   }
   static fiscalYear = 2022;
@@ -10,9 +10,7 @@ class Department {
     return {name: name}
   }
 
-  describe(this: Department) {
-    console.log(`Department: ${this.id}: ${this.name}`);
-  }
+  abstract describe(this: Department): void;
 
   addEmployee(employee: string) {
     this.employees.push(employee);
@@ -28,6 +26,10 @@ class ITDepartment extends Department {
   constructor(id: string, public admins: string[]) {
     super(id, "IT");
     this.admins = admins;
+  }
+
+  describe() {
+    console.log(`Department ID is ${this.id}`)
   }
 }
 
@@ -53,6 +55,10 @@ class AccountingDepartment extends Department {
     this.lastReport = reports[0];
   }
 
+  describe() {
+      console.log(`Department ID is ${this.id}`)
+  }
+
   addReport(report: string) {
     this.reports.push(report);
     this.lastReport = this.reports[0];
@@ -72,21 +78,23 @@ class AccountingDepartment extends Department {
 
 const employee1 = Department.createEmployee("Max")
 
-console.log(employee1, Department.fiscalYear)
+// console.log(employee1, Department.fiscalYear)
 
 const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
 
 const itteam = new ITDepartment("d2", ["Abhi"]);
 
-accounting.mostRecentReport = "";
+// accounting.mostRecentReport = "";
 
-console.log(itteam);
+// console.log(itteam);
 
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
 
-accounting.addEmployee("Max");
-accounting.addEmployee("Abhiram");
-accounting.printEmployeeInformation();
+// accounting.addEmployee("Max");
+// accounting.addEmployee("Abhiram");
+// accounting.printEmployeeInformation();
+
+accounting.describe();
 
 // accounting.employees[2] = "Anna";  => this would result in an error
 

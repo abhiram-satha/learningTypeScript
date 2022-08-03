@@ -47,6 +47,9 @@ class AccountingDepartment extends Department {
         }
         this.addReport(value);
     }
+    describe() {
+        console.log(`Department ID is ${this.id}`);
+    }
     addReport(report) {
         this.reports.push(report);
         this.lastReport = this.reports[0];
@@ -62,15 +65,16 @@ class AccountingDepartment extends Department {
     }
 }
 const employee1 = Department.createEmployee("Max");
-console.log(employee1, Department.fiscalYear);
+// console.log(employee1, Department.fiscalYear)
 const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
 const itteam = new ITDepartment("d2", ["Abhi"]);
-accounting.mostRecentReport = "";
-console.log(itteam);
+// accounting.mostRecentReport = "";
+// console.log(itteam);
 // accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
-accounting.addEmployee("Max");
-accounting.addEmployee("Abhiram");
-accounting.printEmployeeInformation();
+// accounting.addEmployee("Max");
+// accounting.addEmployee("Abhiram");
+// accounting.printEmployeeInformation();
+accounting.describe();
 // accounting.employees[2] = "Anna";  => this would result in an error
 console.log(accounting);
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
