@@ -39,4 +39,5 @@ Section 5: Classes & Interfaces
     - readonly (can only be changed at intialization & typescript only)
     - Inheritance
     - Getters & Setters
-    - Static properties => forces all classes to use the same function, but would have to declare for each one separately 
+    - Static properties => forces all classes to use the same function, but would have to declare for each one separately; anything marked as abstract can not be substantiated and can only be used for inheritance 
+    - Singleton => only allows you to create one object from a class
