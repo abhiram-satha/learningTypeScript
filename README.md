@@ -38,3 +38,4 @@ Section 5: Classes & Interfaces
     - Private Access, protected
     - readonly (can only be changed at intialization & typescript only)
     - Inheritance
+    - Getters & Setters
