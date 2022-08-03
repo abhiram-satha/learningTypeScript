@@ -39,4 +39,4 @@ Section 5: Classes & Interfaces
     - readonly (can only be changed at intialization & typescript only)
     - Inheritance
     - Getters & Setters
-    - Static properties
+    - Static properties => forces all classes to use the same function, but would have to declare for each one separately 

@@ -7,7 +7,7 @@ abstract class Department {
   }
   static fiscalYear = 2022;
   static createEmployee(name: string) {
-    return {name: name}
+    return { name: name };
   }
 
   abstract describe(this: Department): void;
@@ -29,7 +29,7 @@ class ITDepartment extends Department {
   }
 
   describe() {
-    console.log(`Department ID is ${this.id}`)
+    console.log(`Department ID is ${this.id}`);
   }
 }
 
@@ -56,7 +56,7 @@ class AccountingDepartment extends Department {
   }
 
   describe() {
-      console.log(`Department ID is ${this.id}`)
+    console.log(`Department ID is ${this.id}`);
   }
 
   addReport(report: string) {
@@ -76,7 +76,7 @@ class AccountingDepartment extends Department {
   }
 }
 
-const employee1 = Department.createEmployee("Max")
+const employee1 = Department.createEmployee("Max");
 
 // console.log(employee1, Department.fiscalYear)
 
