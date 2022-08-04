@@ -1,5 +1,6 @@
 interface Named {
   readonly name: string;
+  outputName?: string;  //=> the ? means optional
 }
 
 interface Greetable extends Named {
