@@ -108,5 +108,5 @@
   "exclude": [
     "node_modules" //would be the default, no need to add
   ],
-  "include": ["src/app.ts", "src/analytics.ts"]
+  "include": ["src/app.ts"]
 }

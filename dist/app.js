@@ -1,82 +1,11 @@
 "use strict";
-class Department {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-        // private name: string; //public is done by default
-        this.employees = [];
-        // this.name = n;
+let user1;
+user1 = {
+    name: "Abhiram",
+    age: 28,
+    greet(phrase) {
+        console.log(`${phrase} ${this.name}`);
     }
-    static createEmployee(name) {
-        return { name: name };
-    }
-    describe() {
-        console.log(`Department: ${this.id}: ${this.name}`);
-    }
-    addEmployee(employee) {
-        this.employees.push(employee);
-    }
-    printEmployeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-    }
-}
-Department.fiscalYear = 2022;
-class ITDepartment extends Department {
-    constructor(id, admins) {
-        super(id, "IT");
-        this.admins = admins;
-        this.admins = admins;
-    }
-}
-class AccountingDepartment extends Department {
-    constructor(id, reports) {
-        super(id, "Accounting");
-        this.reports = reports;
-        this.lastReport = reports[0];
-    }
-    get mostRecentReport() {
-        if (this.lastReport) {
-            return this.lastReport;
-        }
-        throw new Error("No report found");
-    }
-    set mostRecentReport(value) {
-        if (!value) {
-            throw new Error("No Report found");
-        }
-        this.addReport(value);
-    }
-    describe() {
-        console.log(`Department ID is ${this.id}`);
-    }
-    addReport(report) {
-        this.reports.push(report);
-        this.lastReport = this.reports[0];
-    }
-    printReports() {
-        console.log(this.reports);
-    }
-    addEmployee(employee) {
-        if (employee === "Max") {
-            return;
-        }
-        this.employees.push(employee);
-    }
-}
-const employee1 = Department.createEmployee("Max");
-// console.log(employee1, Department.fiscalYear)
-const accounting = new AccountingDepartment("d1", ["Balance Sheet"]);
-const itteam = new ITDepartment("d2", ["Abhi"]);
-// accounting.mostRecentReport = "";
-// console.log(itteam);
-// accounting.id= "55" => results in an error because .id is read only and can only be used at initialization
-// accounting.addEmployee("Max");
-// accounting.addEmployee("Abhiram");
-// accounting.printEmployeeInformation();
-accounting.describe();
-// accounting.employees[2] = "Anna";  => this would result in an error
-console.log(accounting);
-// const accountingCopy = {name: 'DUMMY', describe: accounting.describe}
-// accountingCopy.describe();
+};
+user1.greet("Hello");
 //# sourceMappingURL=app.js.map
